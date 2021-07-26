@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import firebase from './firebase';
+import firebase from './firebase.js';
 import './App.css';
 import Examples from './Examples';
 
@@ -7,6 +7,14 @@ function App() {
 
   const [ manifestations, setManifestations] = useState([]);
   const [ userInput, setUserInput] = useState("");
+
+  const handleUserSelectionToggle = (selection) => {
+        console.log(selection)
+
+        const dbRef = firebase.database().ref()
+
+        dbRef.push(selection)
+    };
 
   // use state for firebase value listener 
   useEffect(() => {
@@ -65,6 +73,7 @@ function App() {
       <form action="submit" onSubmit={handleSubmit}>
         <label htmlFor="usersManifestation">add your own manifestation here</label>
         <input type="text" 
+        placeholder="I am .... I have ... I choose... I attract"
         onChange={handleChange}
       //controlled input react updates the input 
         value={userInput}
@@ -86,7 +95,7 @@ function App() {
         <li></li>
       </ul>
 
-      <Examples />
+      <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
       
     </div>
   );
