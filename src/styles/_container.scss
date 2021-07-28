@@ -1,0 +1,51 @@
+.wrapper {
+    max-width: 1080px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.container {
+    background: rgb(221,97,17);
+    background: linear-gradient(90deg, rgba(221,97,17,1) 0%, rgba(212,127,71,1) 54%, rgba(191,152,124,1) 100%);
+    margin-top: 5%;
+    text-align: center;
+    color: black;
+    box-shadow: black;
+}
+
+.App ul {
+    list-style: none;
+}
+
+header {
+    margin: 0;
+}
+
+h1 {
+    padding-top: 5%;
+}
+
+.station {
+    text-transform: uppercase;
+}
+
+form button {
+
+    height: 50px;
+    width: 100px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type=text] {
+    width: 50%;
+    padding: 25px;
+    border: 2px solid white;
+    background-color: purple;
+}

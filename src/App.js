@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import firebase from './firebase.js';
 import './styles/App.scss'
 import Examples from './Examples';
+import Form from './Form'
 
 function App() {
 
@@ -64,39 +65,29 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1> The Manife<span className="station">station</span></h1>
-        <h2>a journal for you affirmations</h2>
-      </header>
-      <p>if you can dream it you can do it</p>
+      <div className="container wrapper">
+        <header>
+          <h1> The Manife<span className="station">station</span></h1>
+          <h2>all aboard the journey to your dreams</h2>
+        </header>
 
-      <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
+        <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
+        <Form handleChange={handleChange} handleSubmit={handleSubmit} userInput={userInput}/>
 
-      <form action="submit" onSubmit={handleSubmit}>
-        <label htmlFor="usersManifestation">add your own manifestation here</label>
-        <input type="text" 
-        placeholder="I am .... I have ... I choose... I attract"
-        onChange={handleChange}
-      //controlled input react updates the input 
-        value={userInput}
-        required
-        />
-        <button>manifest!</button>
-      </form>
+        <ul>
+          {
+            manifestations.map((manifestObj) => {
+              return (
+                <li key={manifestObj.key}>
+                  <p>{manifestObj.contentBlurb} <span><button onClick={() => handleDelete(manifestObj.key)}>X</button></span></p>
+                </li>
 
-      <ul>
-        {
-          manifestations.map((manifestObj) => {
-            return (
-              <li key={manifestObj.key}>
-                <p>{manifestObj.contentBlurb} <span><button onClick={() => handleDelete(manifestObj.key)}>X</button></span></p>
-              </li>
-
-            )
-          }) 
-        }
-        <li></li>
-      </ul>  
+              )
+            }) 
+          }
+          <li></li>
+        </ul>  
+      </div>
     </div>
   );
 }
