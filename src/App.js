@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import firebase from './firebase.js';
-import './App.css';
+import './styles/App.scss'
 import Examples from './Examples';
 
 function App() {
@@ -64,11 +64,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1> The Manifestor </h1>
-      <h2>a journal for you affirmations</h2>
+      <header>
+        <h1> The Manife<span className="station">station</span></h1>
+        <h2>a journal for you affirmations</h2>
+      </header>
       <p>if you can dream it you can do it</p>
 
-      <form action=""></form>
+      <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
 
       <form action="submit" onSubmit={handleSubmit}>
         <label htmlFor="usersManifestation">add your own manifestation here</label>
@@ -77,6 +79,7 @@ function App() {
         onChange={handleChange}
       //controlled input react updates the input 
         value={userInput}
+        required
         />
         <button>manifest!</button>
       </form>
@@ -93,10 +96,7 @@ function App() {
           }) 
         }
         <li></li>
-      </ul>
-
-      <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
-      
+      </ul>  
     </div>
   );
 }

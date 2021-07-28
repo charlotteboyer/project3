@@ -1,0 +1,47 @@
+@import 'setup';
+@import 'variables';
+@import 'mixins';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+html {
+  font-size: 62.5%;
+  background-image: url(../r-nolan-hFBi3eFotSM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.App {
+  background-color: orange;
+  text-align: center;
+  color: black;
+}
+
+.App ul {
+  list-style: none;
+}
+
+header {
+  margin: 0;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  color: red;
+  margin: 0;
+}
+
+.station {
+  text-transform: uppercase;
+}
+
+form button {
+
+  height: 50px;
+  width: 100px;
+}
+
