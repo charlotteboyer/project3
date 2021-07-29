@@ -237,9 +237,17 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+  background-image: url(../r-nolan-hFBi3eFotSM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .wrapper {
   max-width: 1080px;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -250,12 +258,10 @@ html {
   margin-top: 5%;
   text-align: center;
   color: black;
-  -webkit-box-shadow: black;
-          box-shadow: black;
-}
-
-.App ul {
-  list-style: none;
+  border-radius: 50px;
+  -webkit-box-shadow: 15px 15px #993399;
+          box-shadow: 15px 15px #993399;
+  padding-bottom: 10px;
 }
 
 header {
@@ -270,9 +276,21 @@ h1 {
   text-transform: uppercase;
 }
 
+.examples button {
+  height: 75px;
+  width: 75px;
+  margin-left: 15px;
+  border-color: white;
+  border-radius: 100px;
+  background-color: #993399;
+}
+
 form button {
   height: 50px;
-  width: 100px;
+  width: 200px;
+  margin: 10px 0;
+  border-color: #993399;
+  background-color: black;
 }
 
 form {
@@ -292,10 +310,35 @@ form {
 }
 
 form input[type=text] {
-  width: 50%;
+  width: 75%;
   padding: 25px;
-  border: 2px solid white;
-  background-color: purple;
+  background-color: #993399;
+  border: none;
+  text-align: center;
+}
+
+form label {
+  padding-bottom: 10px;
+}
+
+ul {
+  background-color: #993399;
+  width: 75%;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+  padding-top: 5px;
+}
+
+li button {
+  background-color: #993399;
+  border: none;
+}
+
+.trainIcon {
+  margin: 0 5px 0 -15px;
 }
 
 .App {
@@ -304,27 +347,103 @@ form input[type=text] {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   font-family: "Zen Tokyo Zoo", cursive;
   color: #993399;
   margin: 0;
 }
 
-h2 {
+h2, p {
   font-style: italic;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+p {
+  line-height: 0;
+}
+
+h3, form label {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 form input[type=text] {
   font-family: "Ubuntu", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
   color: black;
 }
 
-html {
-  font-size: 62.5%;
-  background-image: url(../r-nolan-hFBi3eFotSM-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+form button {
+  font-family: "Zen Tokyo Zoo", cursive;
+  font-size: 2rem;
+  color: #993399;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.examples button {
+  font-size: 4rem;
+  color: #d47f47;
+  text-align: center;
+}
+
+ul li {
+  font-size: 2rem;
+  font-style: normal;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    padding-top: 10%;
+  }
+
+  h2, h3 {
+    font-size: 1.8rem;
+  }
+
+  form input[type=text] {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  form button {
+    height: 25px;
+    width: 100px;
+    font-size: 1rem;
+  }
+
+  .examples button {
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+  }
+
+  ul li {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  form input[type=text] {
+    font-size: 1rem;
+  }
+
+  .examples button {
+    margin-left: 5px;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
 }

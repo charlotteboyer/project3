@@ -1,6 +1,14 @@
+html {
+    font-size: 62.5%;
+    background-image: url(../r-nolan-hFBi3eFotSM-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .wrapper {
     max-width: 1080px;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -10,11 +18,9 @@
     margin-top: 5%;
     text-align: center;
     color: black;
-    box-shadow: black;
-}
-
-.App ul {
-    list-style: none;
+    border-radius: 50px;
+    box-shadow: 15px 15px rgb(153, 51, 153);
+    padding-bottom: 10px;
 }
 
 header {
@@ -29,10 +35,25 @@ h1 {
     text-transform: uppercase;
 }
 
+
+.examples button {
+    height: 75px;
+    width: 75px;
+    margin-left: 15px;
+
+    border-color: white;
+    border-radius: 100px;
+    background-color: rgb(153, 51, 153);
+}
+
+
 form button {
 
     height: 50px;
-    width: 100px;
+    width: 200px;
+    margin: 10px 0;
+    border-color: rgb(153, 51, 153);
+    background-color: black;
 }
 
 
@@ -44,8 +65,35 @@ form {
 }
 
 form input[type=text] {
-    width: 50%;
+    width: 75%;
     padding: 25px;
-    border: 2px solid white;
-    background-color: purple;
+    background-color: rgb(153, 51, 153);
+    border: none;
+    text-align: center;
 }
+
+form label {
+    padding-bottom: 10px;
+}
+
+ul {
+    background-color: rgb(153, 51, 153);
+    width: 75%; 
+    margin: 0 auto; 
+    
+}
+
+ul li {
+    list-style: none;
+    padding-top: 5px;
+}
+
+li button {
+    background-color: rgb(153, 51, 153);
+    border: none;
+}
+
+.trainIcon {
+    margin:0 5px 0 -15px;
+}
+

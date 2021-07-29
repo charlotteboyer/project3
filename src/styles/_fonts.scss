@@ -7,19 +7,54 @@
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   font-family: 'Zen Tokyo Zoo', cursive;
   color: rgb(153, 51, 153);
   margin: 0;
 }
 
-h2 {
+h2, p {
   font-style: italic;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+p {
+  line-height: 0;
+}
+
+h3, form label {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 form input[type=text] {
   font-family:'Ubuntu', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
   color: black;
 }
+
+form button {
+
+  font-family:'Zen Tokyo Zoo', cursive;
+  font-size: 2rem;
+  color: rgb(153, 51, 153);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.examples button {
+  font-size: 4rem;
+  color: rgb(212,127,71);
+  text-align: center;
+  
+}
+
+ul li {
+  font-size: 2rem;
+  font-style: normal;
+  text-align: left;
+
+}
+

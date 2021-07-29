@@ -11,13 +11,13 @@ function Examples(props) {
     return (
         <div className="examples">
             <h3>Choose from one of the below affirmations</h3>
-            <button onClick={(e) => {props.handleUserSelectionToggle(e.target.value)}} type="checkbox" 
+            <button onClick={(e) => {props.handleUserSelectionToggle(`I have an abundance of wealth. Money flows to me in unexpected ways.`)}} type="checkbox" 
             id="wealth" 
             name="wealth"
-            value= "I have wealth">{wealthIcon}</button>
-            <button onClick={() => {props.handleUserSelectionToggle("happiness")}}  type="checkbox" id="happiness" name="happiness">{happyIcon}</button>
-            <button onClick={() => {props.handleUserSelectionToggle("love")}}  type="checkbox" id="love" name="love">{loveIcon}</button>
-            <button onClick={() => {props.handleUserSelectionToggle("health")}}  type="checkbox" id="health" name="health">{healthIcon}</button>
+            >{wealthIcon}</button>
+            <button onClick={() => {props.handleUserSelectionToggle("I choose happiness. Feeling joy is my birthright")}}  type="checkbox" id="happiness" name="happiness">{happyIcon}</button>
+            <button onClick={() => {props.handleUserSelectionToggle("My heart is prepared to recieve love. I welcome love with open arms")}}  type="checkbox" id="love" name="love">{loveIcon}</button>
+            <button onClick={() => {props.handleUserSelectionToggle("I attract health and vitality. My body is strong and prosperous")}}  type="checkbox" id="health" name="health">{healthIcon}</button>
 
         </div>
     )

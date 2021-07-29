@@ -3,6 +3,7 @@ import firebase from './firebase.js';
 import './styles/App.scss'
 import Examples from './Examples';
 import Form from './Form'
+import List from './List.js';
 
 function App() {
 
@@ -67,26 +68,21 @@ function App() {
     <div className="App">
       <div className="container wrapper">
         <header>
-          <h1> The Manife<span className="station">station</span></h1>
+          <h1> The Manifest<span className="station">station</span></h1>
           <h2>all aboard the journey to your dreams</h2>
         </header>
 
-        <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
-        <Form handleChange={handleChange} handleSubmit={handleSubmit} userInput={userInput}/>
+        <section>
 
-        <ul>
-          {
-            manifestations.map((manifestObj) => {
-              return (
-                <li key={manifestObj.key}>
-                  <p>{manifestObj.contentBlurb} <span><button onClick={() => handleDelete(manifestObj.key)}>X</button></span></p>
-                </li>
+          <Examples handleUserSelectionToggle={handleUserSelectionToggle} />
 
-              )
-            }) 
-          }
-          <li></li>
-        </ul>  
+          <p>OR</p>
+
+          <Form handleChange={handleChange} handleSubmit={handleSubmit} userInput={userInput}/>
+
+        </section>
+        <List manifestations={manifestations} handleDelete={handleDelete}/>
+
       </div>
     </div>
   );

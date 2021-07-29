@@ -1,16 +1,9 @@
 @import 'setup';
-@import 'variables';
-@import 'mixins';
 @import 'container';
 @import 'fonts';
+@import 'mediaq';
 
-html {
-  font-size: 62.5%;
-  background-image: url(../r-nolan-hFBi3eFotSM-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 
 
 
