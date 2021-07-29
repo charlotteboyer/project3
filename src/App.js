@@ -99,6 +99,9 @@ function App() {
         <List manifestations={manifestations} handleDelete={handleDelete}/>
 
       </div>
+      <footer>
+      <p>Created @ <a href="https://junocollege.com/">Juno College</a></p>
+      </footer>
     </div>
   );
 }
