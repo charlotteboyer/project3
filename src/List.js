@@ -13,7 +13,11 @@ const List= (props) => {
               return (
                 <li key={manifestObj.key}>
                   <span className="trainIcon">{trainIcon}</span>
-                  {manifestObj.contentBlurb} <span><button onClick={() => props.handleDelete(manifestObj.key)}>{xIcon}</button></span>
+                  {manifestObj.contentBlurb} 
+                  <span>
+                    <span className="sr-only">delete here</span>
+                    <button onClick={() => props.handleDelete(manifestObj.key)}>{xIcon}</button>
+                  </span>
                 </li>             
               )
             }) 

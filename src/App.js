@@ -1,3 +1,20 @@
+//PSUEDO CODE 
+//Create a user input form on the page with a submit button so that the user can add content to the page 
+//capture the user input from the text input - more specifically we want to get the user interaction with the page 
+//that value has to go in a state 
+//when the user presses the submit button the content they have included gets updated in the firebase 
+
+// stretch goals 
+//buttons where the user selects one of four inputs
+//create state to hold pre written content
+//on submit pre-written content is added to the firebase 
+//jsx will print that content to the page
+
+// other stretch goal 
+// a “clear” button that allows user to delete their list item
+//this button will be after each item the user has put in already
+//create a function that is called by the button that will remove the item by getting the key of that item from firebase, pass that key to the function so that they function can find it and delete it 
+
 import { useState, useEffect } from 'react';
 import firebase from './firebase.js';
 import './styles/App.scss'
@@ -11,7 +28,6 @@ function App() {
   const [ userInput, setUserInput] = useState("");
 
   const handleUserSelectionToggle = (selection) => {
-        console.log(selection)
 
         const dbRef = firebase.database().ref()
 
@@ -24,7 +40,6 @@ function App() {
 
     dbRef.on('value', (snapshot) => {
       const myData = snapshot.val();
-      console.log(myData)
 
       const newArray = [];
 
